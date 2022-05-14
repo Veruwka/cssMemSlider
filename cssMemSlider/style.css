@@ -24,18 +24,20 @@
 
 .image-for-slider {
     margin: 0 auto;
-    width: 71.3%;
-    height: 71%;
+    width: 71.38%;
+    height: 71.34%;
     overflow: hidden;
 }
 
 .image {
-    width: 54.8%;
-    height: 51.5%;
+    width: 50%;
+    height: 50%;
     position: absolute;
+    background-size: contain;
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
+    transition: 3s;
 }
 
 .input1 {
@@ -57,7 +59,13 @@
 .text {
     font: 400 22px/24px Ermilov;
     color: var(--color-font);
-    text-align: justify;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    width: 400px;
+    margin: 0 auto;
+    transition: 2s;
+    background-color: transparent;
 }
 
 input {
@@ -65,7 +73,7 @@ input {
 }
 
 .label-block {
-    margin: 130px 200px;
+    margin: 75px 200px;
     text-align: center;
 }
 
@@ -77,5 +85,68 @@ input {
     width: 15px;
     height: 15px;
     margin: 0 10px;
+    transition: 1s;
 }
 
+.label:hover {
+    box-shadow: 0px 0px 10px var(--color-font);
+    background-color: var(--label-color);
+    border-color: var(--label-color);
+}
+
+#input1:checked ~ .image-for-slider > .input1 {
+    opacity: 1;
+    z-index: 99;
+    height: 47.8%;
+}
+
+#input2:checked ~ .image-for-slider > .input2 {
+    opacity: 1;
+    z-index: 99;
+    height: 422px;
+}
+
+#input3:checked ~ .image-for-slider > .input3 {
+    opacity: 1;
+    z-index: 99;
+    height: 422px;
+}
+
+#input4:checked ~ .image-for-slider > .input4 {
+    opacity: 1;
+    z-index: 99;
+    height: 422px;
+}
+
+#input1:checked ~ .label-block > .label1,
+#input2:checked ~ .label-block > .label2,
+#input3:checked ~ .label-block > .label3,
+#input4:checked ~ .label-block > .label4 {
+    box-shadow: 0px 0px 10px var(--color-font);
+    background-color: var(--label-color);
+    border-color: var(--label-color);
+}
+
+#input1:checked ~ .text1 {
+    opacity: 1;
+    z-index: 99;
+    transform: rotate(360deg);
+}
+
+#input2:checked ~ .text2 {
+    opacity: 1;
+    z-index: 99;
+    transform: rotate(360deg);
+}
+
+#input3:checked ~ .text3 {
+    opacity: 1;
+    z-index: 99;
+    transform: rotate(360deg);
+}
+
+#input4:checked ~ .text4 {
+    opacity: 1;
+    z-index: 99;
+    transform: rotate(360deg);
+}
