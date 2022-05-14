@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    background-color: var(--background-color);
+}
+
+@font-face {
+    font-family: Ermilov;
+    src: url(./assets/fonts/Ermilov-bold.otf);
+}
+
+:root {
+    --color-font: #fff;
+    --background-color: #000;
+    --label-color: #ff9900;
+}
+
+.wrapper {
+    margin: 100px auto;
+    max-width: 800px;
+    height: 600px;
+    background-color: var(--background-color);
+}
+
+.image-for-slider {
+    margin: 0 auto;
+    width: 71.3%;
+    height: 71%;
+    overflow: hidden;
+}
+
+.image {
+    width: 54.8%;
+    height: 51.5%;
+    position: absolute;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+}
+
+.input1 {
+    background-image: url(./assets/img/Louie_1.jpg);
+}
+
+.input2 {
+    background-image: url(./assets/img/Louie_2.jpg);
+}
+
+.input3 {
+    background-image: url(./assets/img/Louie_3.jpg);
+}
+
+.input4 {
+    background-image: url(./assets/img/Louie_4.jpg);
+}
+
+.text {
+    font: 400 22px/24px Ermilov;
+    color: var(--color-font);
+    text-align: justify;
+}
+
+input {
+    display: none;
+}
+
+.label-block {
+    margin: 130px 200px;
+    text-align: center;
+}
+
+.label {
+    display: inline-block;
+    cursor: pointer;
+    border: 2px solid var(--color-font);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin: 0 10px;
+}
+
