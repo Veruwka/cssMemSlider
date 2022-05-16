@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     background-color: var(--background-color);
+    overflow: hidden;
 }
 
 @font-face {
@@ -12,13 +13,14 @@
 :root {
     --color-font: #fff;
     --background-color: #000;
-    --label-color: #ff9900;
+    --label-color: #0000ff;
+    ;
 }
 
 .wrapper {
-    margin: 100px auto;
-    max-width: 800px;
-    height: 600px;
+    margin: 11.72vh auto;
+    width: 66.67vw;
+    height: 70.34vh;
     background-color: var(--background-color);
 }
 
@@ -30,14 +32,15 @@
 }
 
 .image {
-    width: 50%;
-    height: 50%;
+    width: 47.65%;
+    height: 50.2%;
     position: absolute;
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
     transition: 3s;
+    transform: translate(150%);
 }
 
 .input1 {
@@ -57,15 +60,15 @@
 }
 
 .text {
-    font: 400 22px/24px Ermilov;
+    font: 400 2.5vw/2.5vw Ermilov;
     color: var(--color-font);
     text-align: center;
     opacity: 0;
     position: absolute;
-    width: 400px;
-    margin: 0 auto;
+    width: 66.7%;
     transition: 2s;
     background-color: transparent;
+    margin-top: 2vh;
 }
 
 input {
@@ -73,63 +76,68 @@ input {
 }
 
 .label-block {
-    margin: 75px 200px;
+    margin: 15% 30% 0;
+    width: 40%;
     text-align: center;
 }
 
 .label {
     display: inline-block;
     cursor: pointer;
-    border: 2px solid var(--color-font);
+    background-color: var(--label-color);
+    border: 0.3vw solid var(--label-color);
     border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    margin: 0 10px;
-    transition: 1s;
+    width: 1.5vw;
+    height: 2vh;
+    margin: 0 0.4vw;
+    transition: 0.7s;
 }
 
 .label:hover {
-    box-shadow: 0px 0px 10px var(--color-font);
-    background-color: var(--label-color);
-    border-color: var(--label-color);
+    background-color: var(--color-font);
+    border-color: var(--color-font);
 }
 
 #input1:checked ~ .image-for-slider > .input1 {
     opacity: 1;
     z-index: 99;
-    height: 47.8%;
+    height: 50.2%;
+    transform: translate(0);
 }
 
 #input2:checked ~ .image-for-slider > .input2 {
     opacity: 1;
     z-index: 99;
-    height: 422px;
+    height: 50.2%;
+    transform: translate(0);
 }
 
 #input3:checked ~ .image-for-slider > .input3 {
     opacity: 1;
     z-index: 99;
-    height: 422px;
+    height: 50.2%;
+    transform: translate(0);
 }
 
 #input4:checked ~ .image-for-slider > .input4 {
     opacity: 1;
     z-index: 99;
-    height: 422px;
+    height: 50.2%;
+    transform: translate(0);
 }
 
 #input1:checked ~ .label-block > .label1,
 #input2:checked ~ .label-block > .label2,
 #input3:checked ~ .label-block > .label3,
 #input4:checked ~ .label-block > .label4 {
-    box-shadow: 0px 0px 10px var(--color-font);
-    background-color: var(--label-color);
+    box-shadow: inset 0 0  2em 0.5em var(--background-color);
     border-color: var(--label-color);
 }
 
 #input1:checked ~ .text1 {
     opacity: 1;
     z-index: 99;
+    transform: scale(1);
     transform: rotate(360deg);
 }
 
