@@ -20,7 +20,7 @@
 .wrapper {
     margin: 11.72vh auto;
     width: 66.67vw;
-    height: 70.34vh;
+    height: 90vh;
     background-color: var(--background-color);
 }
 
@@ -35,7 +35,8 @@
     width: 47.65%;
     height: 50.2%;
     position: absolute;
-    background-size: contain;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     opacity: 0;
     z-index: 0;
@@ -157,4 +158,24 @@ input {
     opacity: 1;
     z-index: 99;
     transform: rotate(360deg);
+}
+
+
+@media (max-width: 1200px) {
+
+    .label-block {
+        margin: 10% 30% 0;
+        width: 40%;
+        text-align: center;
+    }
+    
+    .label {
+        width: 1.5vw;
+        height: 2.7vh;
+        margin: 0 0.3vw;
+    }
+
+    .text {
+        margin-top: 0;
+    }
 }
