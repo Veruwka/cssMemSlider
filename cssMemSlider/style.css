@@ -20,7 +20,7 @@
 .wrapper {
     margin: 11.72vh auto;
     width: 66.67vw;
-    height: 90vh;
+    height: 73vh;
     background-color: var(--background-color);
 }
 
@@ -33,7 +33,7 @@
 
 .image {
     width: 47.65%;
-    height: 50.2%;
+    height: 0;
     position: absolute;
     background-size: cover;
     background-position: center;
@@ -41,7 +41,8 @@
     opacity: 0;
     z-index: 0;
     transition: 3s;
-    transform: translate(150%);
+    border-radius: 0.4em;
+    box-shadow: 0 0 0.5em 0.2em var(--color-font) ;
 }
 
 .input1 {
@@ -69,7 +70,7 @@
     width: 66.7%;
     transition: 2s;
     background-color: transparent;
-    margin-top: 2vh;
+    margin-top: 0.1vh;
 }
 
 input {
@@ -77,7 +78,7 @@ input {
 }
 
 .label-block {
-    margin: 15% 30% 0;
+    margin: 10% 30% 0;
     width: 40%;
     text-align: center;
 }
@@ -86,10 +87,10 @@ input {
     display: inline-block;
     cursor: pointer;
     background-color: var(--label-color);
-    border: 0.3vw solid var(--label-color);
+    border: 0.15em solid var(--label-color);
     border-radius: 50%;
-    width: 1.5vw;
-    height: 2vh;
+    width: 0.7em;
+    height: 0.7em;
     margin: 0 0.4vw;
     transition: 0.7s;
 }
@@ -103,36 +104,32 @@ input {
     opacity: 1;
     z-index: 99;
     height: 50.2%;
-    transform: translate(0);
 }
 
 #input2:checked ~ .image-for-slider > .input2 {
     opacity: 1;
     z-index: 99;
     height: 50.2%;
-    transform: translate(0);
 }
 
 #input3:checked ~ .image-for-slider > .input3 {
     opacity: 1;
     z-index: 99;
     height: 50.2%;
-    transform: translate(0);
 }
 
 #input4:checked ~ .image-for-slider > .input4 {
     opacity: 1;
     z-index: 99;
     height: 50.2%;
-    transform: translate(0);
 }
 
 #input1:checked ~ .label-block > .label1,
 #input2:checked ~ .label-block > .label2,
 #input3:checked ~ .label-block > .label3,
 #input4:checked ~ .label-block > .label4 {
-    box-shadow: inset 0 0  2em 0.5em var(--background-color);
     border-color: var(--label-color);
+    background-color: var(--background-color);
 }
 
 #input1:checked ~ .text1 {
@@ -158,24 +155,4 @@ input {
     opacity: 1;
     z-index: 99;
     transform: rotate(360deg);
-}
-
-
-@media (max-width: 1200px) {
-
-    .label-block {
-        margin: 10% 30% 0;
-        width: 40%;
-        text-align: center;
-    }
-    
-    .label {
-        width: 1.5vw;
-        height: 2.7vh;
-        margin: 0 0.3vw;
-    }
-
-    .text {
-        margin-top: 0;
-    }
 }
