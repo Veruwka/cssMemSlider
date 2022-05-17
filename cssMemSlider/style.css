@@ -129,7 +129,7 @@ input {
 #input2:checked ~ .label-block > .label2,
 #input3:checked ~ .label-block > .label3,
 #input4:checked ~ .label-block > .label4 {
-    border-color: var(--label-color);
+    border-color: var(--color-font);
     background-color: var(--background-color);
 }
 
@@ -156,3 +156,40 @@ input {
     z-index: 99;
     transform: translate(0);
 }
+
+@media (max-width: 767px) {
+    .wrapper {
+        margin: 5vh auto;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .image-for-slider {
+        width: 94.38%;
+        height: 50.34%;
+    }
+
+    .image {
+        width: 94.65%;
+    }
+
+    .text {
+        font: 400 4vw/4vw Ermilov;
+        text-align: justify;
+        width: 94%;
+        margin: 1vh 0 0 3vw;
+        transform:translateX(-100%);
+    }
+
+    .label-block {
+        margin: 7em 0 0 30%;
+    }
+    
+    .label {
+        border: 0.3em solid var(--label-color);
+        width: 1.5em;
+        height: 1.5em;
+        margin: 0 0.5vw;
+    }
+}
+
