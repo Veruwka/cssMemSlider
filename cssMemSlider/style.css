@@ -114,6 +114,10 @@ label:hover > .label{
     border-color: var(--color-font);
 }
 
+label:active > .label {
+    box-shadow: inset 0 0 2em 0.2em var(--background-color);
+}
+
 #input1:checked ~ .image-for-slider > .input1 {
     opacity: 1;
     z-index: 99;
