@@ -1,0 +1,212 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: Ermilov;
+    src: url(./assets/fonts/Ermilov-bold.otf);
+}
+
+:root {
+    --color-font: #fff;
+    --background-color: #000;
+    --label-color: #0000ff;
+    ;
+}
+
+.wrapper {
+    margin: 11.72vh auto;
+    width: 66.67vw;
+    height: 73vh;
+    background-color: var(--background-color);
+}
+
+.image-for-slider {
+    margin: 0 auto;
+    width: 71.38%;
+    height: 71.34%;
+    overflow: hidden;
+}
+
+.image {
+    width: 47.65%;
+    height: 0;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    transition: 3s;
+    border-radius: 0.4em;
+    box-shadow: 0 0 0.5em 0.2em var(--color-font) ;
+}
+
+.input1 {
+    background-image: url(./assets/img/Louie_1.jpg);
+}
+
+.input2 {
+    background-image: url(./assets/img/Louie_2.jpg);
+}
+
+.input3 {
+    background-image: url(./assets/img/Louie_3.jpg);
+}
+
+.input4 {
+    background-image: url(./assets/img/Louie_4.jpg);
+}
+
+.text {
+    font: 400 1.2vw/1.2vw Ermilov;
+    color: var(--color-font);
+    text-align: left;
+    opacity: 0;
+    position: absolute;
+    width: 32%;
+    transition: 2s;
+    transform:translateX(-10%);
+    background-color: transparent;
+    margin: 0.1vh 0 0 10vw;
+}
+
+input {
+    display: none;
+}
+
+.label-block {
+    margin: 0 0 0 66%;
+    width: 25%;
+    text-align: center;
+    height: 5vh;
+}
+
+.label {
+    display: inline-block;
+    cursor: pointer;
+    background-color: var(--label-color);
+    border: 0.15em solid var(--label-color);
+    border-radius: 50%;
+    width: 0.7em;
+    height: 0.7em;
+    transition: 0.5s;
+}
+
+.label:hover {
+    background-color: var(--color-font);
+    border-color: var(--color-font);
+}
+
+label {
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    border: 0.5em solid transparent;
+    cursor: pointer;
+}
+
+label:hover > .label{
+    background-color: #fff;
+    border-color: var(--color-font);
+}
+
+label:active > .label {
+    box-shadow: inset 0 0 2em 0.2em var(--background-color);
+}
+
+#input1:checked ~ .image-for-slider > .input1 {
+    opacity: 1;
+    z-index: 99;
+    height: 50.2%;
+}
+
+#input2:checked ~ .image-for-slider > .input2 {
+    opacity: 1;
+    z-index: 99;
+    height: 50.2%;
+}
+
+#input3:checked ~ .image-for-slider > .input3 {
+    opacity: 1;
+    z-index: 99;
+    height: 50.2%;
+}
+
+#input4:checked ~ .image-for-slider > .input4 {
+    opacity: 1;
+    z-index: 99;
+    height: 50.2%;
+}
+
+#input1:checked ~ .label-block > label > .label1,
+#input2:checked ~ .label-block > label > .label2,
+#input3:checked ~ .label-block > label > .label3,
+#input4:checked ~ .label-block > label > .label4 {
+    background-color: var(--background-color);
+}
+
+#input1:checked ~ .text1 {
+    opacity: 1;
+    z-index: 99;
+    transform: translate(0);
+}
+
+#input2:checked ~ .text2 {
+    opacity: 1;
+    z-index: 99;
+    transform: translate(0);
+}
+
+#input3:checked ~ .text3 {
+    opacity: 1;
+    z-index: 99;
+    transform: translate(0);
+}
+
+#input4:checked ~ .text4 {
+    opacity: 1;
+    z-index: 99;
+    transform: translate(0);
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        margin: 5vh auto;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .image-for-slider {
+        width: 94.38%;
+        height: 50.34%;
+    }
+
+    .image {
+        width: 94.65%;
+    }
+
+    .text {
+        font: 400 3vw/3vw Ermilov;
+        text-align: justify;
+        width: 94%;
+        margin: 7vh 0 0 3vw;
+        transform:translateX(-100%);
+    }
+
+    .label-block {
+        margin: 2vh 0 0 23%;
+        width: 55%;
+    }
+    
+    .label {
+        border: 0.2em solid var(--label-color);
+        width: 1em;
+        height: 1em;
+        margin: 0 0.5vw;
+    }
+}
+
